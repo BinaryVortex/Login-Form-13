@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Login Form |Disandu Perera </title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+                          <!---- STYLE.CSS ---->
+
+    <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;800&display=swap');
+
+        *, body, html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Noto Sans', sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to top right, #d10ede, #2c9ed7);
+        }
+        
+        .container {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .container .login-bg-1 {
+            position: absolute;
+            height: 380px;
+            width: 330px;
+            background: linear-gradient(-45deg, #ee00ff 20%, #3dbeff 100%);
+            border-top-right-radius: 40%;
+            border-top-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            border-bottom-left-radius: 20%;
+            transform: rotate(-32deg);
+        }
+        
+        .container .login-bg-2 {
+            position: absolute;
+            height: 360px;
+            width: 340px;
+            background: rgba(255, 255, 255, 0.4);
+            border-top-right-radius: 40%;
+            border-top-left-radius: 40%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 40%;
+            transform: rotate(-20deg);
+            bottom: 60px;
+            left: 85px;
+            box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.15);
+        }
+        
+        .container .login-container {
+            width: 270px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .icon-wrapper {
+            background: #f2f3f5;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+            margin-top: 0;
+            overflow: hidden;
+        }
+        
+        .icon-big {
+            font-size: 5.5rem;
+            background: -webkit-linear-gradient(90deg, #ee00ff, #3dbeff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            bottom: -8px;
+        }
+        
+        h2.sign-in {
+            color: #f2f3f5;
+            margin: 20px 0;
+        }
+        
+        .input-icon-wrapper-bg {
+            width: 60px;
+            height: 35px;
+            background: linear-gradient(90deg, #ee00ff, #3dbeff);
+            border-top-left-radius: 30%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            transform: rotate(10deg);
+        }
+        
+        .input-holder {
+            display: flex;
+            flex-direction: row;
+            margin: 8px 0;
+            width: 100%;
+        }
+        
+        .input-icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            transform: rotate(-10deg);
+        }
+        
+        .input-icon {
+            font-size: 1.2rem;
+            color: #f2f3f5
+        }
+        
+        input {
+            border: 1px solid #f2f3f5;
+            background: none;
+            border-radius: 20px;
+            margin-left: 10px;
+            padding-left: 10px;
+            color: #f2f3f5;
+            width: 100%;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        ::placeholder {
+            color: rgba(242, 243, 245, 0.5);
+        }
+        
+        .remember-forgot {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            margin-left: 45px;
+        }
+        
+        .forgot {
+            font-size: 12px;
+            color: #f2f3f5;
+            font-weight: 300;
+            text-decoration: none;
+        }
+        
+        .lbl-remember {
+            font-size: 12px;
+            color: #f2f3f5;
+            font-weight: 400;
+        }
+        
+        .login-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 100px;
+            margin-left: 30px;
+        }
+        
+        button.login {
+            padding: 10px 30px;
+            color: #f2f3f5;
+            font-weight: 300;
+            letter-spacing: 1px;
+            background: linear-gradient(-90deg, #ee00ff, #3dbeff);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .no-account {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        a.sign-up {
+            font-size: 14px;
+            font-weight: 300;
+            color: #f2f3f5;
+        }
+        
+        .shadow {
+            width: 100px;
+            height: 100px;
+            background: black;
+            position: absolute;
+            border-radius: 50%;
+            bottom: -25px;
+            left: 185px;
+            z-index: -1;
+            opacity: 0.5;
+            box-shadow: 0 0 30px 10px black;
+            filter: blur(20px);
+            transform: scale(1, 0.2);
+        
+        }</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-bg-1"></div>
+        <div class="login-bg-2"></div>
+        <div class="login-container">
+            <div class="icon-wrapper">
+                <i class="ri-user-fill icon-big"></i>
+            </div>
+            <h2 class="sign-in">Sign In</h2>
+            <div class="input-holder">
+                <div class="input-icon-wrapper-bg">
+                    <div class="input-icon-wrapper">
+                        <i class="ri-user-fill input-icon"></i>
+                    </div>
+                </div>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-holder">
+                <div class="input-icon-wrapper-bg">
+                    <div class="input-icon-wrapper">
+                        <i class="ri-lock-fill input-icon"></i>
+                    </div>
+                </div>
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="remember-forgot">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="lbl">
+                    <label class="lbl-remember" for="lbl">Remember</label>
+                </div>
+                <a href="#" class="forgot">Forgot password?</a>
+            </div>
+            <div class="login-wrapper">
+                <button class="login">LOGIN</button>
+                <div class="no-account">
+                    <span class="forgot">Dont' have account?</span>
+                    <a href="#" class="sign-up">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</body>
+
+</html>
